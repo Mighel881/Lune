@@ -346,6 +346,27 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+			<string>Miscellaneous</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>love.litten.lunepreferences</string>
+			<key>key</key>
+			<string>hideDNDBanner</string>
+			<key>label</key>
+			<string>Hide DND Banner</string>
+			<key>PostNotification</key>
+			<string>love.litten.lunepreferences/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
 			<string>Other Options</string>
 		</dict>
 		<dict>

@@ -14,12 +14,12 @@ BOOL enabled;
 	luneView = [[UIImageView alloc] initWithFrame:CGRectMake([xPositionValue doubleValue], [yPositionValue doubleValue], [sizeValue doubleValue], [sizeValue doubleValue])];
 	[luneView setImage:[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"/Library/PreferenceBundles/LunePrefs.bundle/icon%d.png", [iconValue intValue]]]];
 	luneView.image = [luneView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+	[luneView setContentMode:UIViewContentModeScaleAspectFill];
 	[luneView setAlpha:0.0];
 
 	// color
 	if (!useCustomColorSwitch) [luneView setTintColor:[UIColor whiteColor]];
 	else if (useCustomColorSwitch) [luneView setTintColor:[SparkColourPickerUtils colourWithString:[preferencesDictionary objectForKey:@"customColor"] withFallback:@"#FFFFFF"]];
-	[luneView setContentMode:UIViewContentModeScaleAspectFill];
 
 	// shadow/glow
 	if (glowSwitch) {
@@ -92,6 +92,19 @@ BOOL enabled;
 	%orig;
 
 	if (isRoundLockScreenInstalled) [[luneDarkeningView layer] setCornerRadius:0];
+
+}
+
+%end
+
+%hook DNDNotificationsService
+
+- (void)_queue_postOrRemoveNotificationWithUpdatedBehavior:(BOOL)arg1 significantTimeChange:(BOOL)arg2 { // hide dnd banner
+
+	if (hideDNDBannerSwitch)
+		return;
+	else
+		%orig;
 
 }
 
@@ -206,6 +219,9 @@ BOOL enabled;
 	// background
 	[preferences registerBool:&darkenBackgroundSwitch default:YES forKey:@"darkenBackground"];
 	[preferences registerObject:&darkeningAmountValue default:@"0.5" forKey:@"darkeningAmount"];
+
+	// miscellaneous
+	[preferences registerBool:&hideDNDBannerSwitch default:NO forKey:@"hideDNDBanner"];
 
 	if (enabled) {
 		%init(Lune);

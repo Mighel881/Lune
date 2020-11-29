@@ -38,6 +38,9 @@ BOOL useArtworkBasedColorSwitch = YES;
 BOOL darkenBackgroundSwitch = YES;
 NSString* darkeningAmountValue = @"0.5";
 
+// miscellaneous
+BOOL hideDNDBannerSwitch = NO;
+
 @interface SBFLockScreenDateView : UIView
 @end
 
