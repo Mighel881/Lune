@@ -194,7 +194,7 @@ BOOL enabled;
 %ctor {
 
 	preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.lunepreferences"];
-	preferencesDictionary = [NSDictionary dictionaryWithContentsOfFile: @"/var/mobile/Library/Preferences/love.litten.lunepreferences.plist"];
+	preferencesDictionary = [NSDictionary dictionaryWithContentsOfFile: @"/var/mobile/Library/Preferences/love.litten.lune.colorspreferences.plist"];
 	nena = [[libKitten alloc] init];
 	isRoundLockScreenInstalled = [[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/DynamicLibraries/RoundLockScreen.dylib"];
 	

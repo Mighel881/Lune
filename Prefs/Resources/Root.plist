@@ -159,7 +159,7 @@
 			<key>libsparkcolourpicker</key>
 			<dict>
 				<key>defaults</key>
-				<string>love.litten.lunepreferences</string>
+				<string>love.litten.lune.colorspreferences</string>
 				<key>fallback</key>
 				<string>#FFFFFF</string>
 				<key>alpha</key>
@@ -170,7 +170,7 @@
 			<key>key</key>
 			<string>customColor</string>
 			<key>PostNotification</key>
-			<string>love.litten.lunepreferences/ReloadPrefs</string>
+			<string>love.litten.lune.colorspreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -229,7 +229,7 @@
 			<key>libsparkcolourpicker</key>
 			<dict>
 				<key>defaults</key>
-				<string>love.litten.lunepreferences</string>
+				<string>love.litten.lune.colorspreferences</string>
 				<key>fallback</key>
 				<string>#FFFFFF</string>
 				<key>alpha</key>
@@ -240,7 +240,7 @@
 			<key>key</key>
 			<string>customGlowColor</string>
 			<key>PostNotification</key>
-			<string>love.litten.lunepreferences/ReloadPrefs</string>
+			<string>love.litten.lune.colorspreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
