@@ -71,30 +71,6 @@ BOOL enabled;
 
 }
 
-- (void)viewWillAppear:(BOOL)animated { // roundlockscreen compatibility
-
-	%orig;
-
-	if (isRoundLockScreenInstalled) [[luneDarkeningView layer] setCornerRadius:38];
-
-}
-
-- (void)viewWillDisappear:(BOOL)animated { // roundlockscreen compatibility
-
-	%orig;
-
-	if (isRoundLockScreenInstalled) [[luneDarkeningView layer] setCornerRadius:38];
-
-}
-
-- (void)viewDidAppear:(BOOL)animated { // roundlockscreen compatibility
-
-	%orig;
-
-	if (isRoundLockScreenInstalled) [[luneDarkeningView layer] setCornerRadius:0];
-
-}
-
 %end
 
 %hook DNDNotificationsService

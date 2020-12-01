@@ -260,7 +260,7 @@
 			<key>min</key>
 			<real>0.0</real>
 			<key>max</key>
-			<real>10.0</real>
+			<real>20.0</real>
 			<key>showValue</key>
 			<true/>
 			<key>isSegmented</key>
