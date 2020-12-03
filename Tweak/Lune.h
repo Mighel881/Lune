@@ -7,7 +7,6 @@
 
 HBPreferences* preferences;
 NSDictionary* preferencesDictionary;
-libKitten* nena;
 
 extern BOOL enabled;
 

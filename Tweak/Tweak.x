@@ -143,7 +143,7 @@ BOOL enabled;
 
             if (dict) {
                 // get artwork based color
-                backgroundArtworkColor = [nena backgroundColor:currentArtwork];
+                backgroundArtworkColor = [libKitten backgroundColor:currentArtwork];
 
                 // set artwork based color
                 [luneView setTintColor:backgroundArtworkColor];
@@ -171,7 +171,6 @@ BOOL enabled;
 
 	preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.lunepreferences"];
 	preferencesDictionary = [NSDictionary dictionaryWithContentsOfFile: @"/var/mobile/Library/Preferences/love.litten.lune.colorspreferences.plist"];
-	nena = [[libKitten alloc] init];
 	isRoundLockScreenInstalled = [[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/DynamicLibraries/RoundLockScreen.dylib"];
 	
 	[preferences registerBool:&enabled default:nil forKey:@"Enabled"];
